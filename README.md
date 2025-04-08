@@ -1,5 +1,5 @@
 # Introduction
-### This project was created after my second year of study. It involves designing a CMOS inverter in 90nm technology using Cadence, along with DC analysis and layout.
+### This project was created after my 5th semester. It involves designing a CMOS inverter in 90nm technology using Cadence, along with DC analysis and layout.
 
 # Project Title: CMOS Inverter in 90nm Technology
 

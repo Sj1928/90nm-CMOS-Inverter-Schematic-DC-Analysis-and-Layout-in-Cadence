@@ -1,22 +1,34 @@
 # Introduction
 ### This project was created after my second year of study. It involves designing a CMOS inverter in 90nm technology using Cadence, along with DC analysis and layout.
 
-# Table of Contents
+# Project Title: CMOS Inverter in 90nm Technology
+
+## Table of Contents
 1. [Introduction](#introduction)
-2. [Design Overview](#design-overview)
-3. [DC Analysis](#dc-analysis)
+2. [Why CMOS Inverter?](#why-cmos-inverter)
+3. [CMOS Inverter Analysis (Pre-Layout)](#cmos-inverter-analysis-prelayout)
+    1. [DC Analysis](#dc-analysis)
+    2. [Transient Analysis](#transient-analysis)
+    3. [DC Parametric Analysis](#dc-parametric-analysis)
 4. [Layout](#layout)
-5. [Conclusion](#conclusion)
 
+## Introduction
+This project was created after my second year of study. It involves designing a CMOS inverter in 90nm technology using Cadence, along with DC analysis and layout.
 
-## Design Overview
-Here, you can describe your design choices, circuit components, and any other relevant details.
+## Why CMOS Inverter?
+In this section, you will explain the importance of the CMOS inverter and its applications in digital circuits, including why it is a fundamental building block in CMOS technology.
 
-## DC Analysis
-This section will explain the DC analysis conducted on the CMOS inverter, along with the results and observations.
+## CMOS Inverter Analysis (Pre-Layout)
+This section includes the various analyses performed on the CMOS inverter design before layout.
+
+### DC Analysis
+Here, you describe the DC analysis of the CMOS inverter, including the analysis of static behavior, voltage transfer characteristics, etc.
+
+### Transient Analysis
+This section covers the transient analysis, including the inverter's response to input changes over time.
+
+### DC Parametric Analysis
+This section explains the parametric DC analysis, where you evaluate different design parameters under various conditions.
 
 ## Layout
-This section covers the layout design of the CMOS inverter, the tool used, and any relevant parameters.
-
-## Conclusion
-Summarize the project and discuss any future work or improvements.
+In this section, you will discuss the layout of the CMOS inverter, including the tools used, layout design considerations, and any other relevant details.

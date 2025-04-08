@@ -20,6 +20,8 @@ In this section, you will explain the importance of the CMOS inverter and its ap
 
 ## CMOS Inverter Analysis (Pre-Layout)
 This section includes the various analyses performed on the CMOS inverter design before layout.
+**##schematic**
+![Schematic Diagram](./images/schematic.png)
 
 ### DC Analysis
 Here, you describe the DC analysis of the CMOS inverter, including the analysis of static behavior, voltage transfer characteristics, etc.

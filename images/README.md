@@ -1,35 +1,76 @@
-these are the step by step snapshots taken!!!!!!!!!!!!!
-schematic.png
-Contains the schematic diagram of the CMOS inverter circuit. It shows the NMOS and PMOS transistors connected in a complementary fashion to implement the inverter functionality.
+# CMOS Inverter Project – Image Reference and Workflow
 
-cmos inverter symbol.png
-Displays the symbolic representation of a CMOS inverter used in circuit diagrams. Useful for high-level abstraction in digital designs.
+This folder contains key images documenting the process of designing, simulating, analyzing, and laying out a CMOS inverter. Below is a step-by-step overview of the workflow, along with associated image references and brief descriptions.
 
-analysis plots.png
-Includes waveform plots from transient or DC analysis of the CMOS inverter, such as input-output voltage relationships and switching behavior.
+---
 
-vol voh vil vih vth.png
-Illustrates key voltage parameters of the inverter:
+## 🛠️ Workflow Overview
 
-VOL: Output Low Voltage
+### Step 1: Design the Schematic  
+Start with creating a transistor-level schematic of the CMOS inverter using PMOS and NMOS transistors.
 
-VOH: Output High Voltage
+![Schematic](schematic.png)  
+*CMOS inverter schematic showing the fundamental structure of the inverter.*
 
-VIL: Input Low Voltage
+---
 
-VIH: Input High Voltage
+### Step 2: Use the Inverter Symbol in Larger Circuits  
+Once the schematic is verified, the inverter can be used as a symbol in larger digital circuits.
 
-VTH: Threshold Voltage (switching point)
+![CMOS Inverter Symbol](cmos%20inverter%20symbol.png)  
+*Simplified symbol of the CMOS inverter used in block-level or hierarchical designs.*
 
-Delay calculation using marker TPLH edge middle.png
-Shows how propagation delay (specifically TPLH: low-to-high transition) is calculated using waveform markers. The edge and midpoint technique is used to identify the timing.
+---
 
-noisemargin.png
-Depicts the noise margins of the CMOS inverter, indicating the acceptable noise voltage levels on input signals without affecting output integrity.
+### Step 3: Run Simulations  
+Simulate the inverter to analyze its performance in terms of output behavior, switching threshold, and voltage levels.
 
-layout without label.png
-The physical layout of the CMOS inverter in the IC design flow, shown without any labels or annotations.
+![Analysis Plots](analysis%20plots.png)  
+*Transient analysis showing input-output waveforms, confirming logic inversion and transition behavior.*
 
-layout.png
-A more detailed version of the CMOS inverter layout, including labels and possibly layers for better understanding of the physical design.
+---
+
+### Step 4: Analyze Voltage Transfer Characteristics (VTC)  
+Identify key parameters such as VOL, VOH, VIL, VIH, and VTH from the VTC curve.
+
+![Voltage Parameters](vol%20voh%20vil%20vih%20vth.png)  
+*VTC plot annotated with logic voltage levels and switching threshold.*
+
+---
+
+### Step 5: Measure Propagation Delay  
+Determine timing performance by measuring TPLH (low-to-high) and TPHL (high-to-low) delays.
+
+![Delay Calculation](Delay%20calculation%20using%20marker%20TPLH%20edge%20middle.png)  
+*Waveform markers used to calculate the propagation delay of the inverter.*
+
+---
+
+### Step 6: Evaluate Noise Margins  
+Ensure the inverter can tolerate noise in the input without affecting output logic.
+
+![Noise Margin](propogation%20delay%20usimhg%20calculator.png)  
+*Graphical representation of noise margins derived from the VTC.*
+
+---
+
+### Step 7: Create Physical Layout  
+Design the physical layout of the CMOS inverter using layout tools. This layout represents how the circuit would be fabricated.
+
+![Layout Without Labels](layout%20without%20label.png)  
+*Unlabeled layout view showing transistor placements and interconnections.*
+
+---
+
+### Step 8: Annotate the Layout  
+Label the different parts of the layout for easier verification and design rule checks.
+
+![Labeled Layout](layout.png)  
+*Final labeled layout, indicating NMOS/PMOS regions, contacts, and metal layers.*
+
+---
+
+## 🧠 Summary
+
+This folder documents the **complete CMOS inverter design flow** from schematic to layout and performance analysis. It can be used for reports, presentations, or future reference in digital logic design or VLSI courses.
 

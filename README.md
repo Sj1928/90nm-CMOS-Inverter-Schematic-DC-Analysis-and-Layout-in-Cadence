@@ -50,17 +50,72 @@ When Vin = 0V (Low Input):
 ## CMOS Inverter Analysis (Pre-Layout)
 
 **##schematic**
-![Schematic Diagram](./images/schematic.png)
-![cmos_inverter_symbol](https://github.com/user-attachments/assets/429a43fe-d5ce-4ed0-8744-7310baa5dbf2)
+![image](https://github.com/user-attachments/assets/3a2af793-245b-46e0-9296-cac68e989322)
+
 
 ### DC Analysis
 DC analysis would be used to plot a Voltage Transfer Characteristics (VTC) curve for the circuit. It will sweep the value of Vin from high to low to determine the working of circuit with respect to different voltage levels in the input. The following plot is observed when simulated :
-![Schematic Diagram](./images/schematic.png)
-### Transient Analysis
-This section covers the transient analysis, including the inverter's response to input changes over time.
+![Screenshot 2025-04-11 105252](https://github.com/user-attachments/assets/57f152ed-93a5-4465-83f2-2e86edca2595)
 
-### DC Parametric Analysis
-This section explains the parametric DC analysis, where you evaluate different design parameters under various conditions.
+| Parameter | Value         |
+|-----------|---------------|
+| Vol       | 570 nV        |
+| Voh       | 999.775 mV    |
+| Vil       | 280 mV        |
+| Vih       | 511.54 mV     |
+
+![vol voh vil vih vth](https://github.com/user-attachments/assets/560b9c01-1588-4e7d-9f28-72a7ad5fa974)
+
+-VOH - Maximum output voltage when it is logic '1'.
+-VOL - Minimun output voltage when it is logic '0'.
+-VIH - Maximum input voltage that can be interpreted as logic '0'.
+-VIL - Minimum input voltage that can be interpreted as logic '1'.
+-Vth - Inverter Threshold voltage
+**note : Vth should be at a value of VDD/2 for maximum noise margins**
+But here Vth = 411.24 mV 
+### Vth Depends on Transistor Sizes (W/L ratios)
+-The inverter threshold (also called the switching point) is the input voltage at which the output equals the input.
+-This point is affected by the width-to-length ratios (W/L) of the PMOS and NMOS transistors.
+-If both transistors had equal drive strengths, Vth ≈ Vdd/2.
+
+### Noise Margin
+Noise Margin High (NMH) = V<sub>OH</sub> − V<sub>IH</sub>
+= 999.775 mV − 511.54 mV = 488.235 mV
+
+Noise Margin Low (NML) = V<sub>IL</sub> − V<sub>OL</sub>
+= 280 mV − 0.00057 mV = 279.99943 mV ≈ 280 mV
+
+| Parameter | Value       |
+|-----------|-------------|
+| NMH       | 488.235 mV  |
+| NML       | 280 mV      |
+
+### Transient Analysis
+Propagation delay refers to the time it takes for a signal to propagate through a gate or inverter, from the input transition to the output transition.
+#### In the case of a CMOS inverter, there are two key delays:
+-tpHL (propagation delay, high-to-low) - Time for the output to go from high (Vdd) to low (0V).
+-tpLH (propagation delay, low-to-high) - Time for the output to go from low (0V) to high (Vdd).
+**One can do this using Markers manually like this :**
+![Delay calculation using marker TPLH edge middle](https://github.com/user-attachments/assets/2a8ffbf0-2f78-43d9-94a2-02f55114f8f4)
+**But Cadence Virtuoso provides Calculator tool which precisely calculates delay and various other parameters**
+![propogation delay usimhg calculator](https://github.com/user-attachments/assets/4c06639c-cd64-49d0-9277-6790483a6526)
+
+
+// ### DC Parametric Analysis
+// This section explains the parametric DC analysis, where you evaluate different design parameters under various conditions.
 
 ## Layout
-In this section, you will discuss the layout of the CMOS inverter, including the tools used, layout design considerations, and any other relevant details.
+Layout is the physical representation of a circuit on silicon.
+It defines how transistors are placed and connected using layers like:
+-Diffusion (active area)
+-Polysilicon (gate)
+-Metal layers (wiring)
+-Contacts/vias (connections between layers)
+-N-well / P-well regions (for PMOS/NMOS placement)
+
+![layout without label](https://github.com/user-attachments/assets/16598cf8-6f4f-48cf-977c-2b6c32606830)
+
+### Adding Label to Layout : 
+-Labels like Vin, Vout, Vdd, and GND help identify which wire or node connects to what signal.
+ Without labels, your layout is just shapes — the tool doesn’t know what's what.
+![layout](https://github.com/user-attachments/assets/d99acfe0-4962-41d4-8c5e-0ce970a27bb1)

@@ -54,7 +54,10 @@ When Vin = 0V (Low Input):
 
 
 ### DC Analysis
-DC analysis would be used to plot a Voltage Transfer Characteristics (VTC) curve for the circuit. It will sweep the value of Vin from high to low to determine the working of circuit with respect to different voltage levels in the input. The following plot is observed when simulated :
+DC analysis would be used to plot a Voltage Transfer Characteristics (VTC) curve for the circuit. 
+![Screenshot 2025-04-11 114827](https://github.com/user-attachments/assets/e46a1d06-2195-4abc-9ced-28f04429ea04)
+
+It will sweep the value of Vin from high to low to determine the working of circuit with respect to different voltage levels in the input. The following plot is observed when simulated :
 ![Screenshot 2025-04-11 105252](https://github.com/user-attachments/assets/57f152ed-93a5-4465-83f2-2e86edca2595)
 
 | Parameter | Value         |
@@ -100,9 +103,6 @@ Propagation delay refers to the time it takes for a signal to propagate through 
 **But Cadence Virtuoso provides Calculator tool which precisely calculates delay and various other parameters**
 ![propogation delay usimhg calculator](https://github.com/user-attachments/assets/4c06639c-cd64-49d0-9277-6790483a6526)
 
-
-// ### DC Parametric Analysis
-// This section explains the parametric DC analysis, where you evaluate different design parameters under various conditions.
 
 ## Layout
 Layout is the physical representation of a circuit on silicon.
